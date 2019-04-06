@@ -10,14 +10,22 @@
 
     <table class="highlight">
         <tr>
-            <th>Song</th><th>Singer</th><th>Added By</th><th>Likes</th><th>Actions</th>
+            <th>addedBy</th>
+            <th>Url</th>
+
+            <th>Videogamename</th>
+            <th>createdBy</th>
         </tr>
 
         <% items.forEach(function(item){  %>
 
-
-
-
+        <tr>
+        <td><%= item.addedBy%> </td>
+        <td><a href="<%= item.URl%>" target="_blank">link to localhost7000</a></td>
+        <td><%= item.videoGameName%></td>
+        <td><%= item.createdBy%></td>
+            <td><a href="/delete?videoGameName=<%=item.videoGameName%>">Delete</a></td>
+</tr>
 
         <% }) %>
     </table>
